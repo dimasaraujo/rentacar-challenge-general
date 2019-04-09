@@ -1,7 +1,7 @@
 # **Desafio do Estacionamento de Carros**
 
 # Motivação
-Avaliar o desempenho de desenvolvedores ao utilizar o framework ASP.NET Core para implementar uma API RESTful.
+Avaliar o desempenho de desenvolvedores ao utilizar o framework ASP.NET Core para implementar uma API RESTful documentada e testada.
 
 # Introdução 
 Você foi procurado para implementar uma API que gerencie um estaciomento privado de veículos. 
@@ -9,27 +9,31 @@ Você foi procurado para implementar uma API que gerencie um estaciomento privad
 O cliente precisa que o sistema seja feito em ASP.NET Core já que ele é produtivo, eficiente e multi-plataforma.
 
 # Descrição do sistema
-- No estacionamento do cliente existe um número predefinido de vagas (V) que não muda durante a execução do sistema e que deve ser maior ou igual a 15.
-- O valor do estacionamento é definido como P1 reais por H horas de permanência mais P2 reais por hora excedente. Esses valores também são fixos durante a execução do sistema.
-- Só pode haver um carro não estacionado por vez no estacionamento.
-- O estacionamento é composto por vagas numeradas.
-- Na entrada do estacionamento existe uma cancela, um painel de informações e uma impressora de tickets.
-- Ao se aproximar da entrada, o carro será detectado e o painel exibirá se há vagas disponíveis ou se já há um carro sendo estacionado.
-    - Caso haja vagas, será capturada a data/hora de entrada e a placa do carro e a cancela se erguerá para que o carro entre. 
-Os dados capturados serão impressos num ticket com código QR para validação na saída.
-    - Ao estacionar, será informado ao sistema em que vaga o carro foi estacionado.
-    - No caso de não haver vagas, será exibida a mensagem "Não há vagas disponíveis".
-    - No caso de haver um carro sendo estacionado, será exibida a mensagem "Aguarde o estacionamento "
+Criar uma API para gerenciamento de carros em um estacionamento, que deve ter pelo menos 15 veículos. 
+Através dos métodos da API será possível ver quantas vagas estão disponíveis, estacionar um carro, realizar o pagamento do ticket e emitir um relatório de recebimentos.
+|Permanência|Valor (R$)|
+|-----------|---------:|
+|Até 3 horas|7,00      |
+|Hora extra |3,00      |
 
+Métodos a serem criados:
+- Consultar quantidade de vagas disponíveis
+- Listar posição das vagas disponíveis
+- Estacionar um carro numa vaga
+- Pagar ticket
+- Relatório com ocupação atual do estacionamento
+- Relatório com valor arrecadado por período
 
+# Tecnologias requeridas
+- ASP.NET Core (C#) rodando em Windows ou Linux
+- Banco de dados à sua escolha (relacional ou não)
+- Testes unitários em todos os métodos da API
+- Documentação dos métodos com Swagger/OpenAPI
+- *(extra)* CI/CD
+- *(extra)* Monitoramento da API
+- *(extra)* FrontEnd em um framework à sua escolha
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+# Como entregar o desafio?
+Faça um fork desse repositório e mande o link de clonagem para anderson@vsoft.com.br.
+Troque o item final (*Como entregar o desafio?*) por *Detalhe da solução*, onde você explicará as decisões de arquitetura que tomou e como executar seu projeto.
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://www.visualstudio.com/en-us/docs/git/create-a-readme). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
